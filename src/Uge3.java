@@ -62,8 +62,47 @@ public class Uge3 {
             day = in.nextInt();
 
             in.close();
+        }
+    }
 
+    public static void opg13() {
+        // Lav et program der laver pyramider:
+        //     *
+        //    ***
+        //   *****
 
+        int spaces = 0;
+        int stars  = 1;
+        int layers = 8;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Skriv et tal mellem 1 og 15: ");
+
+        try {
+            layers = in.nextInt();
+        } catch (Exception ex) {
+            System.out.println("Skal være et tal");
+        }
+
+        if (!intIsBetween(layers, 1, 15)) {
+            System.out.println("Der skal være mellem 1 og 15 lag.");
+            return;
+        }
+
+        spaces = layers - 1;
+
+        for (int currentLayer = layers; currentLayer > 0; currentLayer--) {
+            //System.out.println(spaces);
+            for (int i = spaces; i > 0; i--) {
+                System.out.print(" ");
+            }
+            for (int i = stars; i > 0; i--) {
+                System.out.print("*");
+            }
+            System.out.println();
+            spaces--;
+            stars += 2;
         }
     }
 
