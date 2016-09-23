@@ -37,6 +37,7 @@ public class Uge3 {
         else
             System.out.println("Intet gyldigt");
 
+        in.close();
     }
 
     public static void opg11() {
@@ -104,6 +105,8 @@ public class Uge3 {
             spaces--;
             stars += 2;
         }
+
+        in.close();
     }
 
     private static boolean charIsBetween(char value, int min, int max) {

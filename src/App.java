@@ -2,6 +2,8 @@
  * Created by awo on 23/09/16.
  */
 
+import Uge4_Helpers.Uge4;
+
 import java.util.Scanner;
 
 public class App {
@@ -34,6 +36,8 @@ public class App {
                 Uge3.opg12(); break;
             case 13:
                 Uge3.opg13(); break;
+            case 101:
+                Uge4.test(); break;
 
             // Ellers
             default:
