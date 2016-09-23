@@ -9,14 +9,18 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         System.out.println("Programmeringsopgaver");
-        System.out.println("============= Uge 2 ============");
+
+        System.out.println("\n============ Uge 2 ============");
         System.out.println("5: Afstand mellem linje og punkt");
         System.out.println("7: Passwordprogram (og 12A)");
-        System.out.println("============= Uge 3 ============");
+        System.out.println("\n============ Uge 3 ============");
+
         System.out.println("11: Datoer");
         System.out.println("12: ASCII Table (12B)");
         System.out.println("13: Print en pyramide");
-        //System.out.println("8: Andengradsligning");
+
+        System.out.println("\n============ Uge 4 ============");
+        System.out.println("101: Test af Vector class");
 
         System.out.print("Vælg opgave: ");
         Scanner in = new Scanner(System.in);
@@ -36,6 +40,8 @@ public class App {
                 Uge3.opg12(); break;
             case 13:
                 Uge3.opg13(); break;
+
+            // Uge 4
             case 101:
                 Uge4.test(); break;
 
