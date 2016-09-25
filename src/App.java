@@ -25,10 +25,14 @@ public class App {
 
         System.out.println("\n============ Uge 5 ============");
         System.out.println("19: Punkter");
+        System.out.println("20: Cars");
 
-        System.out.print("Vælg opgave: ");
+        System.out.print("\nVælg opgave: ");
         Scanner in = new Scanner(System.in);
         int opg = in.nextInt();
+
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
 
         switch(opg) {
             // Uge 2
@@ -58,6 +62,8 @@ public class App {
             // Uge 5
             case 19:
                 Uge5.opg19(); break;
+            case 20:
+                Uge5.opg20(); break;
 
             // Ellers
             default:
