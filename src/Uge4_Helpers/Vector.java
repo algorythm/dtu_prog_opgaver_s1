@@ -1,7 +1,5 @@
 package Uge4_Helpers;
 
-import java.util.*;
-
 public class Vector {
     protected double x;
     protected double y;
@@ -12,7 +10,10 @@ public class Vector {
     }
 
     public static Vector add(Vector v1, Vector v2) {
-        return new Vector(v1.x + v1.y, v2.x + v2.y);
+        return new Vector (
+                v1.x + v1.y,
+                v2.x + v2.y
+        );
     }
 
     @Override
