@@ -23,6 +23,9 @@ public class App {
         System.out.println("170: Dato-klasse (17A)");
         System.out.println("171: Banking");
 
+        System.out.println("\n============ Uge 5 ============");
+        System.out.println("19: Punkter");
+
         System.out.print("Vælg opgave: ");
         Scanner in = new Scanner(System.in);
         int opg = in.nextInt();
@@ -51,6 +54,10 @@ public class App {
                 Uge4.opg17A(); break;
             case 171:
                 Uge4.opg17B(); break;
+
+            // Uge 5
+            case 19:
+                Uge5.opg19(); break;
 
             // Ellers
             default:
