@@ -3,7 +3,7 @@
  */
 import java.util.Scanner;
 
-public class Uge3 extends Opgave{
+public class Uge3 extends Opgave {
     // Opgave 12b
     public static void opg12() {
         System.out.println("\n Opgave 12B");

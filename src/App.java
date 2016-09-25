@@ -80,6 +80,8 @@ public class App {
                 default:
                     System.exit(1);
             }
+
+            in.close();
         }
     }
 }
