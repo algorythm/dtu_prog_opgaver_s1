@@ -3,7 +3,7 @@
  */
 import java.util.Scanner;
 
-public class Uge3 {
+public class Uge3 extends Opgave{
     // Opgave 12b
     public static void opg12() {
         System.out.println("\n Opgave 12B");
@@ -38,6 +38,8 @@ public class Uge3 {
             System.out.println("Intet gyldigt");
 
         in.close();
+
+        end();
     }
 
     public static void opg11() {
@@ -64,6 +66,8 @@ public class Uge3 {
 
             in.close();
         }
+
+        end();
     }
 
     public static void opg13() {
@@ -107,6 +111,8 @@ public class Uge3 {
         }
 
         in.close();
+
+        end();
     }
 
     private static <T> boolean isBetween(T value, final int MIN, final int MAX) {

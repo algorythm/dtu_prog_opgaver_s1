@@ -4,7 +4,7 @@
 import java.util.Scanner;
 import java.io.Console;
 
-public class Uge2 {
+public class Uge2 extends Opgave {
     public static void opg5()
     {
         // Afstand mellem linje og punkt
@@ -39,6 +39,8 @@ public class Uge2 {
         System.out.println(dist);
 
         in.close();
+
+        end();
     }
 
     public static void opg7()
@@ -70,5 +72,7 @@ public class Uge2 {
         }
 
         console.printf("Password gyldig: " + new String(password) + "%n");
+
+        end();
     }
 }

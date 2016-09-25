@@ -7,7 +7,11 @@ import Uge5_Helpers.CarProducents;
 import Uge5_Helpers.Color;
 import Uge5_Helpers.Point;
 
-public class Uge5 {
+public class Uge5 extends Opgave{
+    public Uge5 () {
+        Helper.waitForKey();
+    }
+
     public static void opg19() {
         Point p1 = new Point(5,10);
         Point p2 = new Point(5,10);
@@ -24,6 +28,8 @@ public class Uge5 {
         p1.move(2,2);
 
         Point.printPoints(p1,p2);
+
+        end();
     }
 
     public static void opg20() {
@@ -36,5 +42,7 @@ public class Uge5 {
         System.out.println(myCar);
         System.out.println(hisCar);
         System.out.println(herCar);
+
+        end();
     }
 }

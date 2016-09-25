@@ -7,7 +7,7 @@ import Uge4_Helpers.Dato;
 
 import java.util.*;
 
-public class Uge4
+public class Uge4 extends Opgave
 {
     public static void test() {
         Vector v1 = new Vector(1.1, 2.2);
@@ -15,6 +15,8 @@ public class Uge4
         Vector v3 = Vector.add(v1, v2);
 
         System.out.printf(v3.toString());
+
+        end();
     }
 
     // Opgave 15: Gæt mit navn
@@ -57,6 +59,8 @@ public class Uge4
 
         name = name.substring(0, 1).toUpperCase() + name.substring(1);
         System.out.println("Korrekt svar: " + name);
+
+        end();
     }
 
     // Opgave 17A: Dato
@@ -66,6 +70,8 @@ public class Uge4
         System.out.println(dato.toString());
         System.out.println(dato.dk());
         System.out.println(dato.dkText());
+
+        end();
     }
 
     // Opgave 17A; Banking
@@ -88,14 +94,15 @@ public class Uge4
 
         String[] args = {};
         Uge4_Helpers.Banking.Transactions.main(args);
+
+        end();
     }
 
     private static List<Character> strToCharList(String string) {
         List<Character> chars = new ArrayList<Character>();
 
-        for (int i = 0; i < string.length(); i++) {
+        for (int i = 0; i < string.length(); i++)
             chars.add(string.charAt(i));
-        }
 
         return chars;
     }
