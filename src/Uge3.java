@@ -21,13 +21,13 @@ public class Uge3 {
         Scanner in = new Scanner(System.in);
 
         char ch = in.next().charAt(0);
-        if (charIsBetween(ch, UPPER_MIN, UPPER_MAX))
+        if (isBetween(ch, UPPER_MIN, UPPER_MAX))
             System.out.println("Stort bogstav");
 
-        else if (charIsBetween(ch, LOWER_MIN, LOWER_MAX))
+        else if (isBetween(ch, LOWER_MIN, LOWER_MAX))
             System.out.println("Lille bogstav");
 
-        else if (charIsBetween(ch, NUM_MIN, NUM_MAX))
+        else if (isBetween(ch, NUM_MIN, NUM_MAX))
             System.out.println("Tal");
 
             // Tegn: #, !, \ og +, men de virker ikke :(
@@ -51,7 +51,7 @@ public class Uge3 {
         {
             Scanner in = new Scanner(System.in);
 
-            while (intIsBetween(year, 2000, 2999)) {
+            while (isBetween(year, 2000, 2999)) {
                 System.out.print("Indtast år: ");
                 year = in.nextInt();
             }
@@ -86,7 +86,7 @@ public class Uge3 {
             System.out.println("Skal være et tal");
         }
 
-        if (!intIsBetween(layers, 1, 15)) {
+        if (!isBetween(layers, 1, 15)) {
             System.out.println("Der skal være mellem 1 og 15 lag.");
             return;
         }
@@ -109,17 +109,12 @@ public class Uge3 {
         in.close();
     }
 
-    private static boolean charIsBetween(char value, int min, int max) {
-        if (value <= max && value >= min)
-            return true;
-        else
-            return false;
-    }
+    private static <T> boolean isBetween(T value, final int MIN, final int MAX) {
+        if (value instanceof Character)
+            return (new Character(((Character) value).charValue()) <= MAX && new Character(((Character) value).charValue()) >= MIN) ? true : false;
+        else if (value instanceof Integer)
+            return (new Integer(((Integer) value).intValue()) <= MAX && new Integer(((Integer) value).intValue()) >= MIN) ? true : false;
 
-    private static boolean intIsBetween(int value, int min, int max) {
-        if (value <= max && value >= min)
-            return true;
-        else
-            return false;
+        throw new IllegalArgumentException("Must be type char or int");
     }
 }
