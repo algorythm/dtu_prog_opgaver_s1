@@ -4,6 +4,7 @@
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
@@ -37,6 +38,7 @@ public class App {
             System.out.print("\nVælg opgave: ");
             Scanner in = new Scanner(System.in);
             int opg = in.nextInt();
+            in.nextLine();
 
             // Clear the console
             System.out.print("\033[H\033[2J");
@@ -48,13 +50,23 @@ public class App {
 
                 // Uge 2
                 case 5:
-                    Uge2.opg5();  break;
+                    Uge2.opg5();
+                    in.reset();
+                    break;
                 case 7:
                     Uge2.opg7(); break;
 
                 // Uge 3
                 case 11:
-                    Uge3.opg11(); break;
+                    /*Uge3.opg11(); */
+                    System.out.println("\n\n\nDenne funktion virker desværre ikke...");
+                    System.out.println("Vent venligst.");
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException iex) {
+                        Thread.currentThread().interrupt();
+                    }
+                    break;
                 case 12:
                     Uge3.opg12(); break;
                 case 13:
@@ -80,8 +92,6 @@ public class App {
                 default:
                     System.exit(1);
             }
-
-            in.close();
         }
     }
 }

@@ -38,7 +38,7 @@ public class Uge2 extends Opgave {
 
         System.out.println(dist);
 
-        in.close();
+        //in.close();
 
         end();
     }
