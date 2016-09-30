@@ -2,10 +2,7 @@
  * Created by AndersWOlsen on 25-09-2016.
  */
 
-import Uge5_Helpers.Car;
-import Uge5_Helpers.CarProducents;
-import Uge5_Helpers.Color;
-import Uge5_Helpers.Point;
+import Uge5_Helpers.*;
 
 public class Uge5 extends Opgave{
     public Uge5 () {
@@ -36,7 +33,7 @@ public class Uge5 extends Opgave{
         Car newCar = new Car(CarProducents.FERRARI,    Color.RØD);
         Car myCar  = new Car(CarProducents.AUDI,       Color.SORT);
         Car hisCar = new Car(CarProducents.CITROËN,    Color.GRØN);
-        Car herCar = new Car(CarProducents.VOLKSWAGEN, Color.BLÅ);
+        Car herCar = new Car(CarProducents.VOLKSWAGEN, Color.BLÅ, new LicensePlate("SU", "52341"));
 
         System.out.println(newCar);
         System.out.println(myCar);
